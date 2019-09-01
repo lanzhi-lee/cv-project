@@ -1,0 +1,17 @@
+.skill {
+    // transform: translateY(-100px);
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 240px);
+        grid-template-rows: repeat(3, 180px);
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            &:hover {
+                background-color: rgba($color: #000000, $alpha: 0.1)
+            }
+        }
+    }
+}
