@@ -1,0 +1,42 @@
+.home {
+    text-align: center;
+    color: white;
+    h1 {
+        font-size: 36px;
+        animation: scale 1s;
+        animation-fill-mode: forwards;
+    }
+    @mixin home_p {
+        opacity: 0;
+        animation: fade 1s;
+        animation-fill-mode: forwards;
+    }
+    &-p1 {
+        @include home_p;
+        animation-delay: 1s;
+    }
+    &-p2 {
+        @include home_p;
+        animation-delay: 2s;
+    }
+    &-p3 {
+        @include home_p;
+        animation-delay: 3s;
+    }
+    @keyframes scale {
+        0% {
+            transform: scale(0.8);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

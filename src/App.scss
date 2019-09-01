@@ -1,0 +1,28 @@
+.swiper-container {
+    height: 100%;
+}
+
+.swiper-wrapper {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-slide1 {
+        background-color: #6c8cd5;
+    }
+    .swiper-slide2 {
+        background-color: #009999;
+    }
+    .swiper-slide3 {
+        background-color: #c9f76f;
+    }
+}
+
+.swiper-pagination-bullet {
+    transition: 0.2s;
+    &-active {
+        background: #fff !important;
+        transform: scale(1.2);
+    }
+}
