@@ -18,7 +18,7 @@ function App() {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        dynamicBullets: true
+        // dynamicBullets: true
       }
     })
     setSwiper(mySwiper)

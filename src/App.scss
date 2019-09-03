@@ -9,20 +9,24 @@
         align-items: center;
     }
     .swiper-slide1 {
-        background-color: #6c8cd5;
+        background: #6c8cd5 url('./assets/bg.png');
     }
     .swiper-slide2 {
-        background-color: #009999;
+        background: #009999 url('./assets/bg.png');
     }
     .swiper-slide3 {
-        background-color: #c9f76f;
+        background: #c9f76f url('./assets/bg.png');
     }
 }
 
 .swiper-pagination-bullet {
+    margin: 18px 0 !important;
     transition: 0.2s;
     &-active {
         background: #fff !important;
         transform: scale(1.2);
+    }
+    &:hover {
+        transform: scale(3);
     }
 }

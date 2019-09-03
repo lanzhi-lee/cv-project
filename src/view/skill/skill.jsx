@@ -46,12 +46,12 @@ const SkillListItem = props => {
 const Skill = () => {
 
     const skillListData = [
-        { selfClassName: 'basic', iconName: 'HTML', content: 'HTML', infolist: [10, 2, 3] },
+        { selfClassName: 'basic', iconName: 'html', content: 'HTML', infolist: [10, 2, 3] },
         { selfClassName: 'basic', iconName: 'css', content: 'CSS', infolist: [] },
-        { selfClassName: 'basic', iconName: 'javascript-original', content: 'JavaScript', infolist: [] },
-        { selfClassName: 'framework', iconName: 'React', content: 'React', infolist: [] },
-        { selfClassName: 'framework', iconName: 'JS', content: 'Mock.js', infolist: [] },
-        { selfClassName: 'backend', iconName: 'Nodejs', content: 'Node.js', infolist: [] },
+        { selfClassName: 'basic', iconName: 'javascript', content: 'JavaScript', infolist: [] },
+        { selfClassName: 'framework', iconName: 'react', content: 'React', infolist: [] },
+        { selfClassName: 'framework', iconName: 'mockjs', content: 'Mock.js', infolist: [] },
+        { selfClassName: 'backend', iconName: 'nodejs', content: 'Node.js', infolist: [] },
         { selfClassName: 'tools', iconName: 'git', content: 'Git', infolist: [] },
         { selfClassName: 'tools', iconName: 'webpack', content: 'Webpack', infolist: [] },
     ]

@@ -1,9 +1,4 @@
-@mixin flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+@import '../../common.scss';
 .header {
     position: fixed;
     top: 0px;

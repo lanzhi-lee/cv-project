@@ -1,32 +1,25 @@
 .skill {
     min-width: 826px;
-
     // transform: translateY(-100px);
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(3, 180px);
-
-
         &-items {
             display: flex;
             justify-content: center;
             align-items: center;
             transition: 0.5s;
-
             &:hover {
                 background-color: rgba($color: #000000, $alpha: 0.1)
             }
         }
-
         &-basic {
             grid-column-start: span 2;
         }
-
         &-framework {
             grid-column-start: span 3;
         }
-
         &-backend,
         &-tools {
             grid-column-start: span 2;
@@ -40,6 +33,10 @@
     align-items: center;
     position: absolute;
     transition: 0.5s;
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .skill__list-items-info {
