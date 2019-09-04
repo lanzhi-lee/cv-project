@@ -8,6 +8,78 @@ import { Contact, Edu, Exp, Home, Self, Skill } from './view'
 
 function App() {
   const [GlobalSwiper, setSwiper] = useState({})
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const renderPagination = current => {
+    setCurrentSlide(current - 1)
+    return `
+      <span 
+          class="swiper-pagination-custom-item 
+          swiper-pagination-clickable 
+          ${current === 1 && 'swiper-pagination-custom-item-active'}"
+          onclick="swiper.slideTo(0)"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-index"></use>
+            </svg>
+      </span>
+
+      <span 
+          class="swiper-pagination-custom-item 
+          swiper-pagination-clickable 
+          ${current === 2 && 'swiper-pagination-custom-item-active'}"
+          onclick="swiper.slideTo(1)"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-self"></use>
+            </svg>
+      </span>
+
+      <span 
+          class="swiper-pagination-custom-item 
+          swiper-pagination-clickable 
+          ${current === 3 && 'swiper-pagination-custom-item-active'}"
+          onclick="swiper.slideTo(2)"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-edu"></use>
+            </svg>
+      </span>
+
+      <span 
+          class="swiper-pagination-custom-item 
+          swiper-pagination-clickable 
+          ${current === 4 && 'swiper-pagination-custom-item-active'}"
+          onclick="swiper.slideTo(3)"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-skill"></use>
+            </svg>
+      </span>
+
+      <span 
+          class="swiper-pagination-custom-item 
+          swiper-pagination-clickable 
+          ${current === 5 && 'swiper-pagination-custom-item-active'}"
+          onclick="swiper.slideTo(4)"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-exp"></use>
+            </svg>
+      </span>
+
+      <span 
+          class="swiper-pagination-custom-item 
+          swiper-pagination-clickable 
+          ${current === 6 && 'swiper-pagination-custom-item-active'}"
+          onclick="swiper.slideTo(5)"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-contact"></use>
+            </svg>
+      </span>
+    `
+  }
 
   // 初始化swiper
   useEffect(() => {
@@ -17,16 +89,17 @@ function App() {
       mousewheel: true,
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,
-        // dynamicBullets: true
+        type: 'custom',
+        renderCustom: (swiper, current) => renderPagination(current)
       }
     })
     setSwiper(mySwiper)
+    window.swiper = mySwiper
   }, [])
 
   return (
     <div className="App">
-      <Header {...{ GlobalSwiper }} />
+      <Header {...{ GlobalSwiper, currentSlide }} />
       <div className="swiper-container">
         <div className="swiper-wrapper">
           <div className="swiper-slide swiper-slide1" data-hash="index"><Home /></div>

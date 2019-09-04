@@ -3,7 +3,7 @@ import './index.scss'
 
 const Edu = () => {
     function setExpTouch3D() {
-        const expDom = document.getElementsByClassName('edu__main')[0];
+        const expDom = document.querySelector('.edu__main');
         const contentDom = expDom.parentNode;
         expDom.addEventListener('mousemove', throttleGenerator(expMousemoveHandler, 20));
         expDom.addEventListener('mouseout', expMouseoutHandler);
