@@ -14,7 +14,7 @@ const Header = props => {
         <header className="header">
             <section className="header__avatar">
                 <img className="header__avatar-img"
-                    src="https://tva3.sinaimg.cn/crop.0.0.720.720.180/005XvQnFjw8exto6zbandj30k00k0q49.jpg"
+                    src="https://baibai-mine.oss-cn-shanghai.aliyuncs.com/tb6501982.jpg"
                     alt="avatar" />
                 <span className="header__avatar-intro">
                     <span className="header__avatar-intro-name">李战</span>

@@ -5,11 +5,16 @@
     justify-content: center;
     align-items: center;
     color: #333333;
-    &__main {
+
+    &__container {
+        perspective: 25px;
+    }
+
+    &__inner {
         width: 860px;
         height: 350px;
         background-color: #fff;
-        transition: transform 0.3s linear;
+        transition: transform 0.5s linear;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.3);
     }

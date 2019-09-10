@@ -6,7 +6,7 @@ const Self = () => {
         <section className="self">
             <div className="self__avatar">
                 <img className="self__avatar-img"
-                    src="https://tva3.sinaimg.cn/crop.0.0.720.720.180/005XvQnFjw8exto6zbandj30k00k0q49.jpg"
+                    src="https://baibai-mine.oss-cn-shanghai.aliyuncs.com/tb6501982.jpg"
                     alt="avatar"
                 />
                 <ul className="self__avatar-keywords">
