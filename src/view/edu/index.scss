@@ -5,12 +5,11 @@
     justify-content: center;
     align-items: center;
     color: #333333;
-
     &__container {
         perspective: 25px;
     }
-
     &__inner {
+        padding: 20px;
         width: 860px;
         height: 350px;
         background-color: #fff;

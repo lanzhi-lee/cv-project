@@ -83,10 +83,10 @@ const Edu = () => {
                 <div className="edu__inner">
                     <div className="edu__main-1">
                         <h2>教育经历</h2>
-                        <p>于2019.9-2020.6期间就读于河南大学软件学院网络工程专业</p>
+                        <p>于2019.9-2020.6期间就读于 河南大学 软件学院 网络工程专业</p>
                     </div>
                     <div className="edu__main-2">
-                        <h2>校内活动</h2>
+                        <h3>校内活动</h3>
                         <p>河南大学新媒体运营中心</p>
                     </div>
                 </div>

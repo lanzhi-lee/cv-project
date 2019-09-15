@@ -1,0 +1,40 @@
+@import ".../../../../common.scss";
+.exp {
+    &__list {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        width: 940px;
+        height: 300px;
+        &-item {
+            @include flex();
+            box-sizing: border-box;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-radius: 5px;
+            background-color: rgba(#000, 0.1);
+            transition: 0.5s;
+            padding: 20px;
+            // width: 300px;
+        }
+        &-item:hover {
+            transform: scale(1.01);
+            background-color: rgba(#000, 0.2);
+            box-shadow: 1px 3px 10px rgba(#000, 0.5);
+        }
+    }
+    &__list-item {
+        &-title {
+            align-self: stretch;
+            margin: 0;
+        }
+        &-content {
+            margin-bottom: 0;
+            padding-left: 20px;
+            li {
+                text-align: justify;
+            }
+        }
+    }
+}

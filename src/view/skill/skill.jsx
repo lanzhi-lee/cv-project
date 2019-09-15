@@ -1,77 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './index.scss'
 
-const SkillListItem = props => {
-    const { selfClassName, iconName, content, infolist } = props
-
-    const [basicStyle, setBasicStyle] = useState({})
-    const [infoStyle, setInfoStyle] = useState({})
-
-    const handleMouseEnter = () => {
-        setBasicStyle({ opacity: 0 })
-        setInfoStyle({ opacity: 1 })
-    }
-
-    const handleMouseLeave = () => {
-        setBasicStyle({ opacity: 1 })
-        setInfoStyle({ opacity: 0 })
-    }
-
-    return (
-        <span className={`skill__list-items skill__list-${selfClassName}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-
-            <span className="skill__list-items-basic" style={basicStyle}>
-                <svg className="icon" aria-hidden="true">
-                    <use xlinkHref={`#icon-${iconName}`}></use>
-                </svg>
-                <span>{content}</span>
-            </span>
-
-            <span className="skill__list-items-info" style={infoStyle}>
-                <ul>
-                    {
-                        infolist.map((info, index) => (
-                            <li key={index}>{info}</li>
-                        ))
-                    }
-                </ul>
-            </span>
-        </span>
-    )
-}
-
 const Skill = () => {
-
-    const skillListData = [
-        { selfClassName: 'basic', iconName: 'html', content: 'HTML', infolist: [10, 2, 3] },
-        { selfClassName: 'basic', iconName: 'css', content: 'CSS', infolist: [] },
-        { selfClassName: 'basic', iconName: 'javascript', content: 'JavaScript', infolist: [] },
-        { selfClassName: 'framework', iconName: 'react', content: 'React', infolist: [] },
-        { selfClassName: 'framework', iconName: 'mockjs', content: 'Mock.js', infolist: [] },
-        { selfClassName: 'backend', iconName: 'nodejs', content: 'Node.js', infolist: [] },
-        { selfClassName: 'tools', iconName: 'git', content: 'Git', infolist: [] },
-        { selfClassName: 'tools', iconName: 'webpack', content: 'Webpack', infolist: [] },
-    ]
-
     return (
         <section className="skill">
-            <div className="skill__list">
-                {
-                    skillListData.map((listitem, index) => {
-                        const { selfClassName, iconName, content, infolist } = listitem
-                        return <SkillListItem key={index} {...{ selfClassName, iconName, content, infolist }} />
-                    })
-                }
 
-                {/* 
-                    基础 html css js 三大件 sass typescript
-                    工具库 jquery echarts
-                    开发工具 git webpack mock.js
-                    前端框架 react vue 
-                */}
+            <ul className="skill__list">
+                <li className="skill__list-item"><span className="skill__list-item-html">HTML</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-css">CSS</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-js">Js</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-mp">小程序</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-react">React</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-mock">Mockjs</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-node">Nodejs</span></li>
+                <li className="skill__list-item"><span className="skill__list-item-git">Git</span></li>
+            </ul>
+
+            <div className="skill__content">
+                <p>在校时在实验室学习前端，大四时在北京小米科技实习，有比较系统的前端基础知识</p>
+                <p>能够使用React搭建应用，对框架背后的MVVM模式有所了解</p>
+                <p>实际参与开发过多个项目（React，小程序，Vue等），能够很好地配合团队</p>
+                <p>自我驱动力强，有不断求知、探索的精神</p>
+                <p>有过社团（年级）管理经验，能带领并帮助团队成长</p>
             </div>
         </section >
     )

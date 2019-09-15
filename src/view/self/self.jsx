@@ -6,7 +6,7 @@ const Self = () => {
         <section className="self">
             <div className="self__avatar">
                 <img className="self__avatar-img"
-                    src="https://baibai-mine.oss-cn-shanghai.aliyuncs.com/tb6501982.jpg"
+                    src="https://baibai-mine.oss-cn-shanghai.aliyuncs.com/tb6501982-tinfied.jpg"
                     alt="avatar"
                 />
                 <ul className="self__avatar-keywords">
@@ -18,7 +18,7 @@ const Self = () => {
                 </ul>
 
             </div>
-            <div className="self__motto">生活是一种绵延不绝的渴望，渴望不断上升，变得更伟大而高贵</div>
+            <div className="self__motto">对过去从不遗憾，对当下不断探索，对未来充满希望</div>
             <div className="self__line"></div>
             <div className="self__introduction">
                 <p>我是李战，来自河南南阳</p>

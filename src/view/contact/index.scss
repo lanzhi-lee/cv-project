@@ -17,5 +17,39 @@
                 height: 20px;
             }
         }
+        &-item-wechat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            span {
+                @include flex();
+                box-sizing: border-box;
+                width: 100px;
+                height: 100px;
+                background-color: #fff;
+                position: absolute;
+                border-radius: 5px;
+                top: 40px;
+                transition: 0.5s;
+                transition-delay: 0.2s;
+                $arrow-size: 20px;
+                img {
+                    width: 95px;
+                    height: 95px;
+                }
+                &:before {
+                    content: '';
+                    box-sizing: border-box;
+                    display: inline-block;
+                    position: absolute;
+                    width: $arrow-size;
+                    height: $arrow-size;
+                    top: -$arrow-size;
+                    border: ($arrow-size/2) solid transparent;
+                    border-bottom: ($arrow-size/2) solid #fff;
+                }
+            }
+        }
     }
 }

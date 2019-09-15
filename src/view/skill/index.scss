@@ -1,46 +1,84 @@
+@import '../../common.scss';
 .skill {
     min-width: 826px;
     // transform: translateY(-100px);
+    ul,
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__content {
+        // font-size: 1.2rem;
+    }
     &__list {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, 180px);
-        &-items {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.5s;
-            &:hover {
-                background-color: rgba($color: #000000, $alpha: 0.1)
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 120px;
+        position: relative;
+        bottom: 100px;
+        &-item {
+            @include flex();
+            font-size: 0.8rem;
+            $bubble-size: 64px;
+            @mixin anim($min, $max, $time) {
+                animation: scale $time linear infinite;
+                @keyframes scale {
+                    0% {
+                        transform: scale($min);
+                    }
+                    50% {
+                        transform: scale($max);
+                    }
+                    100% {
+                        transform: scale($min);
+                    }
+                }
+            }
+            @mixin position($top, $left) {
+                top: $top+px;
+                left: $left+px;
+            }
+            span {
+                @include flex();
+                width: $bubble-size;
+                height: $bubble-size;
+                border-radius: 50%;
+                box-shadow: inset 0 0 1.5625rem 0.3125rem hsla(0, 0%, 100%, .67);
+                position: relative;
+            }
+            &-html {
+                @include anim(1, 1.1, 1.9s);
+                @include position(0, 0);
+            }
+            &-css {
+                @include anim(0.9, 1.0, 1.8s);
+                @include position(10, 0);
+            }
+            &-js {
+                @include anim(1.3, 1.4, 1.5s);
+                @include position(-30, 0);
+            }
+            &-react {
+                @include anim(1.4, 1.5, 1.4s);
+                @include position(-40, 0);
+            }
+            &-mp {
+                @include anim(1.2, 1.3, 1.5s);
+                @include position(-20, 0);
+            }
+            &-mock {
+                @include anim(1.3, 1.1, 1.8s);
+                @include position(15, 0);
+            }
+            &-node {
+                @include anim(0.9, 1.0, 1.7s);
+                @include position(20, 0);
+            }
+            &-git {
+                @include anim(1.1, 1.2, 1.8s);
+                @include position(10, 0);
             }
         }
-        &-basic {
-            grid-column-start: span 2;
-        }
-        &-framework {
-            grid-column-start: span 3;
-        }
-        &-backend,
-        &-tools {
-            grid-column-start: span 2;
-        }
     }
-}
-
-.skill__list-items-basic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transition: 0.5s;
-    .icon {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-.skill__list-items-info {
-    opacity: 0;
-    position: absolute;
-    transition: 0.5s;
 }
