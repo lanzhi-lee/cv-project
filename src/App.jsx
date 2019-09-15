@@ -3,7 +3,7 @@ import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
 import './App.scss';
 
-import { Header } from './components/index'
+import { Header, Footer } from './components/index'
 import { Contact, Exp, Home, Self, Skill } from './view'
 
 function App() {
@@ -95,7 +95,10 @@ function App() {
           <div className="swiper-slide swiper-slide2" data-hash="self"><Self /></div>
           <div className="swiper-slide swiper-slide1" data-hash="skill"><Skill /></div>
           <div className="swiper-slide swiper-slide2" data-hash="exp"><Exp /></div>
-          <div className="swiper-slide swiper-slide3" data-hash="contact"><Contact /></div>
+          <div className="swiper-slide swiper-slide3" data-hash="contact">
+            <Contact />
+            <Footer />
+          </div>
           {/* <div className="swiper-slide swiper-slide3" data-hash="edu"><Edu /></div> */}
         </div>
         <div className="swiper-pagination"></div>
