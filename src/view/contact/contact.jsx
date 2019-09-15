@@ -6,13 +6,13 @@ const Contact = () => {
 
     return (
         <section className="contact">
-            <span>Contact</span>
+            {/* <span>Contact</span> */}
             <div className="contact__content">
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>虚怀若谷，学习亦是历练</p>
+                <p>专业则是为之奋斗一生的热爱</p>
                 <p>带上我吧，逐梦的路上有你有我</p>
             </div>
+
             <ul className="contact__medialist">
                 <li className="contact__medialist-item contact__medialist-item-mail">
                     <a href="mailto:baibai_lee@163.com">
@@ -40,9 +40,7 @@ const Contact = () => {
                             <use xlinkHref="#icon-weixin"></use>
                         </svg>
                     </a>
-                    {/* <span style={{ display: `${wechatShow ? 'flex' : 'none'}` }}> */}
                     <span style={{ opacity: `${wechatShow ? '1' : '0'}` }}>
-                    {/* <span> */}
                         <img src="https://baibai-mine.oss-cn-shanghai.aliyuncs.com/wechat.png" alt="wechat"/>
                     </span>
                 </li>
@@ -52,4 +50,3 @@ const Contact = () => {
 }
 
 export default Contact
-// {/* <img src="https://baibai-mine.oss-cn-shanghai.aliyuncs.com/wechat.png" alt="" /> */}

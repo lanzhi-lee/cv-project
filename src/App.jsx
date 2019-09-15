@@ -4,7 +4,7 @@ import 'swiper/dist/css/swiper.min.css'
 import './App.scss';
 
 import { Header } from './components/index'
-import { Contact, Edu, Exp, Home, Self, Skill } from './view'
+import { Contact, Exp, Home, Self, Skill } from './view'
 
 function App() {
   const [GlobalSwiper, setSwiper] = useState({})
@@ -42,7 +42,7 @@ function App() {
           onclick="swiper.slideTo(2)"
         >
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-edu"></use>
+                <use xlink:href="#icon-skill"></use>
             </svg>
       </span>
 
@@ -53,7 +53,7 @@ function App() {
           onclick="swiper.slideTo(3)"
         >
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-skill"></use>
+                <use xlink:href="#icon-exp"></use>
             </svg>
       </span>
 
@@ -62,17 +62,6 @@ function App() {
           swiper-pagination-clickable 
           ${current === 5 && 'swiper-pagination-custom-item-active'}"
           onclick="swiper.slideTo(4)"
-        >
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-exp"></use>
-            </svg>
-      </span>
-
-      <span 
-          class="swiper-pagination-custom-item 
-          swiper-pagination-clickable 
-          ${current === 6 && 'swiper-pagination-custom-item-active'}"
-          onclick="swiper.slideTo(5)"
         >
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-contact"></use>
@@ -104,10 +93,10 @@ function App() {
         <div className="swiper-wrapper">
           <div className="swiper-slide swiper-slide1" data-hash="index"><Home /></div>
           <div className="swiper-slide swiper-slide2" data-hash="self"><Self /></div>
-          <div className="swiper-slide swiper-slide3" data-hash="edu"><Edu /></div>
           <div className="swiper-slide swiper-slide1" data-hash="skill"><Skill /></div>
           <div className="swiper-slide swiper-slide2" data-hash="exp"><Exp /></div>
           <div className="swiper-slide swiper-slide3" data-hash="contact"><Contact /></div>
+          {/* <div className="swiper-slide swiper-slide3" data-hash="edu"><Edu /></div> */}
         </div>
         <div className="swiper-pagination"></div>
       </div>
